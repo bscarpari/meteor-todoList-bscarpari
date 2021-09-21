@@ -14,6 +14,12 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 npm install -g meteor
 ```
 
+Logo em seguida clone o repositório com:
+
+```
+git clone https://github.com/bscarpari/meteor-todolist-bscarpari.git
+```
+
 ### 🔧 Execução local
 
 Execute o seguinte comando via terminal para inicializiar o projeto localmente:
