@@ -28,7 +28,7 @@ Execute o seguinte comando via terminal para inicializiar o projeto localmente:
 meteor 
 ```
 
-* Será necessário instalar algumas dependências para o funcionamento pleno *
+* Será necessário instalar algumas dependências para o funcionamento pleno
 
 ## 🛠️ Construído com
 
