@@ -28,6 +28,8 @@ Execute o seguinte comando via terminal para inicializiar o projeto localmente:
 meteor 
 ```
 
+* Será necessário instalar algumas dependências para o funcionamento pleno *
+
 ## 🛠️ Construído com
 
 * ReactJS: framework JavaScript para criar interfaces de usuário (utilizamos através dos Hooks).
