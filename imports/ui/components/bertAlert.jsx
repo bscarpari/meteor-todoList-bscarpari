@@ -1,4 +1,4 @@
-export default bertAlert = ({
+export const bertAlert = ({
   message,
   state = "success",
   icon = "fa fa-check",

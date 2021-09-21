@@ -3,7 +3,7 @@ import { FlowRouter } from "meteor/ostrio:flow-router-extra";
 import { Form } from "./styles/main";
 
 import Navbar from "./components/Navbar";
-import bertAlert from "../ui/components/bertAlert";
+import { bertAlert } from "../ui/components/bertAlert";
 
 export default class SignUp extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ export default class SignUp extends React.Component {
       return false;
     }
 
-    Meteor.call("create.user", new_user, (error, response) => {
+    Meteor.call("create.user", new_user, (error) => {
       if (!error) {
         bertAlert({
           message: `A conta foi criada corretamente.`,

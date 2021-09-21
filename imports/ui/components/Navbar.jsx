@@ -22,7 +22,6 @@ export default class Navbar extends React.Component {
     }, 500);
   }
 
-  //Handlers
   handlerClickBtnLogin = (event) => {
     event.preventDefault();
     FlowRouter.go("App.login");

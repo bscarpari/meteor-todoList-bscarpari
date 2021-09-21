@@ -17,9 +17,12 @@ export const Form = styled.div `
   align-content: center;
 `;
 
-export const Icons = styled.i `  
+export const Task = styled.div `
+  .row {
+    --bs-gutter-x: 0em;
+  }
   i {
     font-size: 100%;
     color: white;
   }
-`;
+`

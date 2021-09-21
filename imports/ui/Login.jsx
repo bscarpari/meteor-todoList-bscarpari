@@ -4,7 +4,7 @@ import { FlowRouter } from "meteor/ostrio:flow-router-extra";
 import { Form } from "./styles/main";
 
 import Navbar from "../ui/components/Navbar";
-import bertAlert from "../ui/components/bertAlert";
+import { bertAlert } from "../ui/components/bertAlert";
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -36,7 +36,7 @@ export default class Login extends React.Component {
     Meteor.loginWithPassword(
       email.value,
       password.value,
-      function (error, res) {
+      function (error) {
         if (error) {
           if (error.message === "User not found [403]") {
             bertAlert({

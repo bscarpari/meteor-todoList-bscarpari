@@ -8,6 +8,7 @@ import AddTaskBtn from "./components/AddTaskBtn";
 import LoginSection from "./components/LoginSection";
 import TaskEdit from "./components/TaskEdit";
 import Task from "./components/Task";
+import { bertAlert } from "./components/bertAlert";
 
 class App extends React.Component {
   state = {
@@ -43,23 +44,21 @@ class App extends React.Component {
       description: document.getElementById("description-task").value,
     };
 
-    Meteor.call("create.task", task, (error, response) => {
+    Meteor.call("create.task", task, (error) => {
       if (!error) {
-        Bert.alert(
-          `Tarefa criada com sucesso.`,
-          "success",
-          "fixed-top",
-          "fa fa-check"
-        );
+        bertAlert({
+          message: "Tarefa criada com sucesso.",
+          state: "success",
+          icon: "fa fa-check",
+        });
         form.reset();
         this.toogleForms();
       } else {
-        Bert.alert(
-          "Erro, tente novamente! " + error.error,
-          "danger",
-          "fixed-top",
-          "fa fa-times"
-        );
+        bertAlert({
+          message: "Erro, tente novamente! " + error.error,
+          state: "danger",
+          icon: "fa fa-times",
+        });
       }
     });
   };
@@ -73,23 +72,21 @@ class App extends React.Component {
       description: document.getElementById("description-task-edit").value,
     };
 
-    Meteor.call("update.task", task, (error, response) => {
+    Meteor.call("update.task", task, (error) => {
       if (!error) {
-        Bert.alert(
-          `Tarefa editada com sucesso.`,
-          "success",
-          "fixed-top",
-          "fa fa-check"
-        );
+        bertAlert({
+          message: "Tarefa editada com sucesso.",
+          state: "success",
+          icon: "fa fa-check",
+        });
         form.reset();
         this.toogleForms();
       } else {
-        Bert.alert(
-          "Erro, tente novamente! " + error.error,
-          "danger",
-          "fixed-top",
-          "fa fa-times"
-        );
+        bertAlert({
+          message: "Erro, tente novamente! " + error.error,
+          state: "danger",
+          icon: "fa fa-times",
+        });
       }
     });
   };
@@ -108,21 +105,19 @@ class App extends React.Component {
 
   handlerClickDeleteTask = (event) => {
     event.preventDefault();
-    Meteor.call("delete.task", event.currentTarget.id, (error, response) => {
+    Meteor.call("delete.task", event.currentTarget.id, (error) => {
       if (!error) {
-        Bert.alert(
-          `Tarefa eliminada com sucesso.`,
-          "success",
-          "fixed-top",
-          "fa fa-check"
-        );
+        bertAlert({
+          message: "Tarefa eliminada com sucesso.",
+          state: "success",
+          icon: "fa fa-check",
+        });
       } else {
-        Bert.alert(
-          "Erro, tente novamente! " + error.error,
-          "danger",
-          "fixed-top",
-          "fa fa-times"
-        );
+        bertAlert({
+          message: "Erro, tente novamente! " + error.error,
+          state: "danger",
+          icon: "fa fa-times",
+        });
       }
     });
   };
@@ -152,7 +147,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Screen">
         <Navbar />
         {this.state.showFormCreate ? (
           <TaskCreate
