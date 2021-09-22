@@ -2,18 +2,6 @@ import React from "react";
 import { Task } from "../styles/main";
 
 export default (props) => {
-
-  function handleSelectTask(id) {
-    const taskIndex = this.state.selectedTasks.findIndex(
-      (taskId) => taskId === id
-    );
-    if (taskIndex !== -1) {
-      this.setState((state) => state.filter((taskId) => taskId !== id));
-    } else {
-      this.setState((state) => [...state, id]);
-    }
-  }
-
   return (
     <div className="bd-example">
       <Task>
