@@ -2,6 +2,8 @@
 
 A lista das tarefas, ou todo list como nós costumamos dizer, é a mais simples e eficaz ferramenta de produtividade pessoal. Todos nós já tivemos a necessidade de fazer uma lista escrevendo as coisas que precisamos fazer.
 
+![Todolist demo](https://raw.githubusercontent.com/bscarpari/meteorTodoList/master/demo_todolist.png)
+
 ## Demo
 
 - https://bscarpari-todolist.meteorapp.com/
